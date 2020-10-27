@@ -5,52 +5,61 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2ab03f5d62a1404f87a659afe8d6d5de)](https://www.codacy.com/manual/hagopj13/node-express-mongoose-boilerplate?utm_source=github.com&utm_medium=referral&utm_content=hagopj13/node-express-mongoose-boilerplate&utm_campaign=Badge_Grade)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-A boilerplate/starter project for quickly building production-ready RESTful APIs using Node.js, Express, and Mongoose.
+Um projeto padrão/inicial para construir rapidamente APIs RESTful prontas para produção usando Node.js, Express e Mongoose.
 
-It comes with many built-in features, such as authentication using JWT, request validation, unit and integration tests, continuous integration, docker support, API documentation, pagination, etc. For more details about the features, check the list below.
+Ele vem com muitos recursos integrados, como : 
+* autenticação usando JWT;
+* validação de solicitação;
+* testes de unidade e integração;
+* integração contínua;
+* suporte para docker;
+* documentação de API;
+* paginação. 
+
+Para mais detalhes sobre os recursos, verifique a lista abaixo.
 
 ## Table of Contents
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [API Documentation](#api-documentation)
-- [Error Handling](#error-handling)
-- [Validation](#validation)
-- [Authentication](#authentication)
-- [Authorization](#authorization)
+- [Funcionalidades](#features)
+- [Começando](#getting-started)
+- [Estrutura do Projeto](#project-structure)
+- [Documentação da API](#api-documentation)
+- [Lidando com Erros](#error-handling)
+- [Validação](#validation)
+- [Autenticação](#authentication)
+- [Autorização](#authorization)
 - [Logging](#logging)
-- [Custom Mongoose Plugins](#custom-mongoose-plugins)
+- [Plugins Customizados do Mongoose](#custom-mongoose-plugins)
 - [Linting](#linting)
 
 ## Features
 
-- **ES9**: latest ECMAScript features
-- **NoSQL database**: [MongoDB](https://www.mongodb.com) object data modeling using [Mongoose](https://mongoosejs.com)
-- **Authentication and authorization**: using [passport](http://www.passportjs.org)
-- **Validation**: request data validation using [Joi](https://github.com/hapijs/joi)
-- **Logging**: using [winston](https://github.com/winstonjs/winston) and [morgan](https://github.com/expressjs/morgan)
-- **Testing**: unit and integration tests using [Jest](https://jestjs.io)
-- **Error handling**: centralized error handling mechanism
-- **API documentation**: with [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) and [swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)
+- **ES9**: últimas funcuinalidades do ECMAScript
+- **NoSQL database**: [MongoDB](https://www.mongodb.com) usando [Mongoose](https://mongoosejs.com)
+- **Authentication and authorization**: usando [passport](http://www.passportjs.org)
+- **Validation**: usando [Joi](https://github.com/hapijs/joi)
+- **Logging**: usando [winston](https://github.com/winstonjs/winston) and [morgan](https://github.com/expressjs/morgan)
+- **Testing**: usando [Jest](https://jestjs.io)
+- **Error handling**: mecanismo centralizado para manipulação de erros
+- **API documentation**: usando [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) e [swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)
 - **Process management**: advanced production process management using [PM2](https://pm2.keymetrics.io)
-- **Dependency management**: with [Yarn](https://yarnpkg.com)
-- **Environment variables**: using [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env#readme)
-- **Security**: set security HTTP headers using [helmet](https://helmetjs.github.io)
-- **Santizing**: sanitize request data against xss and query injection
-- **CORS**: Cross-Origin Resource-Sharing enabled using [cors](https://github.com/expressjs/cors)
-- **Compression**: gzip compression with [compression](https://github.com/expressjs/compression)
-- **CI**: continuous integration with [Travis CI](https://travis-ci.org)
+- **Dependency management**: com [Yarn](https://yarnpkg.com)
+- **Environment variables**: usando [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env#readme)
+- **Security**: define caceçalhos de segurança HTTP com [helmet](https://helmetjs.github.io)
+- **Santizing**: sanitiza requisições contra ataques xss e query injection
+- **CORS**: Cross-Origin Resource-Sharing ativo usando [cors](https://github.com/expressjs/cors)
+- **Compression**: compressão gzip com [compression](https://github.com/expressjs/compression)
+- **CI**: com [Travis CI](https://travis-ci.org)
 - **Docker support**
-- **Code coverage**: using [coveralls](https://coveralls.io)
-- **Code quality**: with [Codacy](https://www.codacy.com)
-- **Git hooks**: with [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged)
-- **Linting**: with [ESLint](https://eslint.org) and [Prettier](https://prettier.io)
-- **Editor config**: consistent editor configuration using [EditorConfig](https://editorconfig.org)
+- **Code coverage**: usando [coveralls](https://coveralls.io)
+- **Code quality**: usando [Codacy](https://www.codacy.com)
+- **Git hooks**: usando [husky](https://github.com/typicode/husky) e [lint-staged](https://github.com/okonet/lint-staged)
+- **Linting**: usando [ESLint](https://eslint.org) e [Prettier](https://prettier.io)
+- **Editor config**: configuração consistente do editor usando [EditorConfig](https://editorconfig.org)
 
-## Getting Started
+## Começando
 
-### Installation
+### Instalação
 
 Clone the repo:
 
@@ -59,13 +68,13 @@ git clone https://github.com/hagopj13/node-express-mongoose-boilerplate.git
 cd node-express-mongoose-boilerplate
 ```
 
-Install the dependencies:
+Instalando as dependências:
 
 ```bash
 yarn install
 ```
 
-Set the environment variables:
+Definindo variáveis de ambiente:
 
 ```bash
 cp .env.example .env
@@ -73,30 +82,30 @@ cp .env.example .env
 # open .env and modify the environment variables (if needed)
 ```
 
-### Commands
+### Comandos
 
-Running locally:
+Rodando localmente:
 
 ```bash
 yarn dev
 ```
 
-Running in production:
+Rodando em produção:
 
 ```bash
 yarn start
 ```
 
-Testing:
+Testando:
 
 ```bash
-# run all tests
+# roda todos os testes
 yarn test
 
-# run all tests in watch mode
+# roda todos os testes em modo de observação
 yarn test:watch
 
-# run test coverage
+# roda teste de cobertura
 yarn coverage
 ```
 
